@@ -1,3 +1,21 @@
+//JANGAN DI HAPUS YA
+
+//BASE BARU NIH
+//CREATOR BASE : ZERO YT7
+//KLO MAU RECODE / EDIT KASIH NAMA CREATOR ASLI NYA
+//HARGAI PEMBUAT BASE YA
+
+//JANGAN LUPA FOLLOW
+//ALL SOSIAL MEDIAKU
+
+//INSTAGRAM : @Zero_YT7
+//YOUTUBE : ZeroYT7
+//TIKTOK : @_zeroyt7
+//GITHUB : Zero-YT7
+
+//THANKS UDAH MAKE BASE INI
+
+
 var {
 WAConnection,
 MessageType,
@@ -234,8 +252,8 @@ sellerJid: '0@s.whatsapp.net'
 
 //━━━━━━━━━━━━━━━[ BUTTON ]━━━━━━━━━━━━━━━━━//
 
-const sendButMessage = (id, text1, desc1, but = [], options = {}) => {
-const buttonMessage = {
+var sendButMessage = (id, text1, desc1, but = [], options = {}) => {
+var buttonMessage = {
 contentText: text1,
 footerText: desc1,
 buttons: but,
@@ -248,10 +266,10 @@ MessageType.buttonsMessage,
 options
 )
 }
-const sendButLocation = async (id, text1, desc1, loc1, but = [], options = {}) => {
+var sendButLocation = async (id, text1, desc1, loc1, but = [], options = {}) => {
 kma = loc1
 mhan = await zero.prepareMessage(from, kma, location)
-const buttonMessages = {
+var buttonMessages = {
 locationMessage: mhan.message.locationMessage,
 contentText: text1,
 footerText: desc1,
@@ -260,7 +278,7 @@ headerType: "LOCATION"
 }
 zero.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
-const sendButImage = async (
+var sendButImage = async (
 id,
 text1,
 desc1,
@@ -270,7 +288,7 @@ options = {}
 ) => {
 kma = gam1;
 mhan = await zero.prepareMessage(from, kma, image);
-const buttonMessages = {
+var buttonMessages = {
 imageMessage: mhan.message.imageMessage,
 contentText: text1,
 footerText: desc1,
@@ -667,7 +685,7 @@ if (args.length < 1) return reply('Teksnya?')
 anu = await zero.chats.all()
 for (let _ of anu) {
 buttonss = [{buttonId: `menu`, buttonText: {displayText: 'MENU'}, type: 1}]
-const btnbc = {
+var btnbc = {
 contentText: `${q}`,
 footerText: '*SILAHKAN TEKAN BUTTON UNTUK INFORMASI LANJUT*',
 buttons: buttonss,
