@@ -1,4 +1,322 @@
-//Mau Ngapain Sih
-//Sorry Gue Enc Biar Gk Di Ubah²
+const fetch = require('node-fetch')
+const axios = require('axios')
+const cfonts = require('cfonts')
+const spin = require('spinnies')
+const Crypto = require('crypto')
 
-function _0x27d5(){const _0x4511c9=['14oFrxZt','arraybuffer','candy','*\x0a~>\x20Ejaan\x20Judul\x20:\x20*','SUBSC','SUBSCRIBE\x20ZERO\x20Y','pow','*\x0a~>\x20Season\x20\x20:\x20*','*\x0a~>\x20Judul\x20Jepang\x20:\x20*','node-fetch','SUBS','*\x0a~>\x20Episode\x20:\x20*','SUBSCR','\x0a~>\x20Ecchi\x20:\x20*','SUBSCRI','SUBSCRIBE\x20ZERO','34XtOowU','base64','jid','31994dpcpTU','add','SUB','random','803980svdywO','cfonts','SUBSCRIBE\x20ZERO\x20YT7...','Iya','magenta','POST','spinnies','Error\x20:\x20','9360131hOqhzs','https://trace.moe/api/search','toUpperCase','test','render','hex','3449984OHHLtu','fail','SUBSCRIBE\x20ZERO\x20YT7','SUBSCRIBE','6943059pPpqqD','json','crypto','SUBSCRIB','?t=','SUBSCRIBE\x20ZERO\x20YT','isAdmin','*\x0a~>\x20Judul\x20Inggris\x20:\x20*','succeed','log','success','block','blue','center','4020tnoPxY','SUBSCRIBE\x20ZERO\x20YT7..','push','2613ZrFzwv','substr','SUBSCRIBE\x20ZE','axios','abs','toString','SUBSCRIBE\x20Z','exports','10bkYNRn','get','floor','red','15HnwgLr','SUBSCRIBE\x20ZERO\x20YT7.','application/json','Saya\x20tidak\x20tau\x20ini\x20anime\x20apa','Tidak','data:image/jpeg;base64,','343794JtyEEQ','3yvxnOQ'];_0x27d5=function(){return _0x4511c9;};return _0x27d5();}function _0x3031(_0x534fd4,_0x5e8e9f){const _0x27d52d=_0x27d5();return _0x3031=function(_0x30315e,_0x315aa5){_0x30315e=_0x30315e-0x179;let _0x572c3f=_0x27d52d[_0x30315e];return _0x572c3f;},_0x3031(_0x534fd4,_0x5e8e9f);}(function(_0x49bd68,_0x114fe5){function _0x3826d5(_0x65527e,_0x50776f){return _0x3031(_0x50776f- -0x299,_0x65527e);}const _0x4aad56=_0x49bd68();while(!![]){try{const _0x546977=-parseInt(_0x3826d5(-0xfc,-0xf1))/0x1*(parseInt(_0x3826d5(-0x10e,-0xf4))/0x2)+-parseInt(_0x3826d5(-0xdf,-0x105))/0x3*(parseInt(_0x3826d5(-0xce,-0xed))/0x4)+-parseInt(_0x3826d5(-0x10b,-0x10c))/0x5*(-parseInt(_0x3826d5(-0x129,-0x106))/0x6)+parseInt(_0x3826d5(-0xe7,-0x104))/0x7*(parseInt(_0x3826d5(-0x100,-0xdf))/0x8)+-parseInt(_0x3826d5(-0xdd,-0xdb))/0x9+-parseInt(_0x3826d5(-0x117,-0x110))/0xa*(-parseInt(_0x3826d5(-0xdb,-0xe5))/0xb)+-parseInt(_0x3826d5(-0xff,-0x11b))/0xc*(-parseInt(_0x3826d5(-0xfc,-0x118))/0xd);if(_0x546977===_0x114fe5)break;else _0x4aad56['push'](_0x4aad56['shift']());}catch(_0x278819){_0x4aad56['push'](_0x4aad56['shift']());}}}(_0x27d5,0x6a851));const fetch=require(_0x17acd7(0x106,0x125)),axios=require(_0x17acd7(0xf1,0x10b)),cfonts=require(_0x17acd7(0x117,0x134)),spin=require(_0x17acd7(0x142,0x139)),Crypto=require(_0x17acd7(0x150,0x147)),wait=async _0x558bbc=>new Promise(async(_0x12af1d,_0x31a6d2)=>{function _0x4e6e31(_0x30b16a,_0x535301){return _0x17acd7(_0x535301,_0x30b16a- -0x272);}const _0x193077=_0x4e6e31(-0x159,-0x13e)+_0x558bbc[_0x4e6e31(-0x165,-0x14d)](_0x4e6e31(-0x145,-0x162)),_0x47b324=await fetch(_0x4e6e31(-0x136,-0x147),{'method':_0x4e6e31(-0x13a,-0x12b),'body':JSON['stringify']({'image':_0x193077}),'headers':{'Content-Type':_0x4e6e31(-0x15c,-0x14b)}});if(!_0x47b324['ok'])_0x31a6d2('Gambar\x20tidak\x20ditemukan!');const _0x24f8df=await _0x47b324['json']();try{const {is_adult:_0x3287ee,title:_0xa22055,title_chinese:_0x431c98,title_romaji:_0x4d2650,title_english:_0x3223a3,episode:_0x41ef57,season:_0x536eb9,similarity:_0x1e730b,filename:_0x1fd7e7,at:_0x5287e5,tokenthumb:_0x462e99,anilist_id:_0x519f84}=_0x24f8df['docs'][0x0];let _0x3bc4b5=()=>_0x1e730b<0.89?'Saya\x20Hanyalah\x20Manusia\x20Biasa\x20:\x20':'',_0x19541f=()=>_0x3287ee?_0x4e6e31(-0x13c,-0x150):_0x4e6e31(-0x15a,-0x16b);_0x12af1d({'video':await getBuffer('https://media.trace.moe/video/'+_0x519f84+'/'+encodeURIComponent(_0x1fd7e7)+_0x4e6e31(-0x129,-0x118)+_0x5287e5+'&token='+_0x462e99),'teks':_0x3bc4b5()+_0x4e6e31(-0x149,-0x130)+_0x19541f()+_0x4e6e31(-0x14e,-0x16f)+_0xa22055+_0x4e6e31(-0x153,-0x143)+_0x4d2650+_0x4e6e31(-0x126,-0x122)+_0x3223a3+_0x4e6e31(-0x14b,-0x12f)+_0x41ef57+_0x4e6e31(-0x14f,-0x130)+_0x536eb9+'*'});}catch(_0x1dca20){console[_0x4e6e31(-0x172,-0x18a)](_0x1dca20),_0x31a6d2(_0x4e6e31(-0x15b,-0x154));}}),simih=async _0x33c69b=>{function _0x16c173(_0x452bb0,_0x37433e){return _0x17acd7(_0x452bb0,_0x37433e-0x2c9);}try{const _0x300f3e=await fetch('https://simsumi.herokuapp.com/api?text='+_0x33c69b,{'method':'GET'}),_0x589ab5=await _0x300f3e[_0x16c173(0x427,0x40f)]();return _0x589ab5[_0x16c173(0x3be,0x3ca)];}catch{return'Simi\x20ga\x20tau\x20apa\x20yang\x20anda\x20ngomong,\x20bahasa\x20alien\x20yah\x20kak?';}},h2k=_0x15718b=>{var _0x237c30=['','\x20K','\x20M','\x20G','\x20T','\x20P','\x20E'],_0x42aaf2=Math['log10'](Math[_0x556486(0x4c3,0x4e6)](_0x15718b))/0x3|0x0;if(_0x42aaf2==0x0)return _0x15718b;var _0x1fc30d=_0x237c30[_0x42aaf2],_0xe4208b=Math[_0x556486(0x4e6,0x4fc)](0xa,_0x42aaf2*0x3),_0x20241a=_0x15718b/_0xe4208b;function _0x556486(_0x17edbe,_0x23466b){return _0x17acd7(_0x17edbe,_0x23466b-0x3da);}var _0x439e8c=_0x20241a['toFixed'](0x1)+'';if(/\.0$/[_0x556486(0x51a,0x518)](_0x439e8c))_0x439e8c=_0x439e8c[_0x556486(0x4bd,0x4e3)](0x0,_0x439e8c['length']-0x2);return _0x439e8c+_0x1fc30d;};function _0x17acd7(_0x76fb33,_0x4269bd){return _0x3031(_0x4269bd- -0x79,_0x76fb33);}const getBuffer=async(_0x315fc0,_0x38934d)=>{function _0x3868cb(_0x7289a0,_0x3d61a3){return _0x17acd7(_0x7289a0,_0x3d61a3-0x1cf);}try{_0x38934d?_0x38934d:{};const _0x4acd14=await axios({'method':_0x3868cb(0x2d8,0x2e0),'url':_0x315fc0,'headers':{'DNT':0x1,'Upgrade-Insecure-Request':0x1},..._0x38934d,'responseType':_0x3868cb(0x2f6,0x2ec)});return _0x4acd14['data'];}catch(_0x3af539){console[_0x3868cb(0x2ea,0x2cf)](_0x3868cb(0x2f6,0x309)+_0x3af539);}},randomBytes=_0x9982a7=>{return Crypto['randomBytes'](_0x9982a7);},generateMessageID=()=>{function _0x112db3(_0xfc22eb,_0x3d33ca){return _0x17acd7(_0x3d33ca,_0xfc22eb-0xe4);}return randomBytes(0xa)[_0x112db3(0x1f1,0x1f2)](_0x112db3(0x224,0x21b))[_0x112db3(0x221,0x21a)]();},getGroupAdmins=_0x26b45a=>{function _0x527c80(_0x5c41d2,_0x116ae2){return _0x17acd7(_0x5c41d2,_0x116ae2-0x416);}admins=[];for(let _0x7f8263 of _0x26b45a){_0x7f8263[_0x527c80(0x569,0x561)]?admins[_0x527c80(0x502,0x51d)](_0x7f8263[_0x527c80(0x541,0x544)]):'';}return admins;},getRandom=_0x4c44b8=>{function _0x288608(_0x1ab33c,_0x2a27ef){return _0x17acd7(_0x2a27ef,_0x1ab33c-0x435);}return''+Math[_0x288608(0x547,0x565)](Math[_0x288608(0x567,0x54f)]()*0x2710)+_0x4c44b8;},spinner={'interval':0x78,'frames':['','S','SU',_0x17acd7(0x14b,0x131),_0x17acd7(0x143,0x126),_0x17acd7(0x122,0x120),_0x17acd7(0x113,0x128),_0x17acd7(0x12c,0x12a),_0x17acd7(0x165,0x148),_0x17acd7(0x139,0x144),_0x17acd7(0x10f,0x10e),_0x17acd7(0x12a,0x10a),'SUBSCRIBE\x20ZER',_0x17acd7(0x120,0x12b),_0x17acd7(0x13d,0x14a),'SUBSCRIBE\x20ZERO\x20YT7.',_0x17acd7(0xe4,0x106),_0x17acd7(0x10e,0x135),'SUBSCRIBE\x20ZERO\x20YT7',_0x17acd7(0x123,0x115),'SUBSCRIBE\x20ZERO\x20YT7..',_0x17acd7(0x137,0x135),_0x17acd7(0xdf,0x106),'SUBSCRIBE\x20ZERO\x20YT7.','SUBSCRIBE\x20ZERO\x20YT7',_0x17acd7(0xfa,0x115),_0x17acd7(0x10e,0x106),_0x17acd7(0x149,0x135),_0x17acd7(0xed,0x106),_0x17acd7(0x118,0x115),_0x17acd7(0x127,0x143),_0x17acd7(0x12f,0x115),_0x17acd7(0x115,0x106),_0x17acd7(0x158,0x135),_0x17acd7(0x11b,0x106),_0x17acd7(0x126,0x115),'SUBSCRIBE\x20ZERO\x20YT7',_0x17acd7(0x12a,0x115),'SUBSCRIBE\x20ZERO\x20YT7..',_0x17acd7(0x130,0x135),'SUBSCRIBE\x20ZERO\x20YT7..',_0x17acd7(0x137,0x115),_0x17acd7(0x154,0x143),_0x17acd7(0xfa,0x115),_0x17acd7(0x101,0x106),'SUBSCRIBE\x20ZERO\x20YT7...',_0x17acd7(0x113,0x106),_0x17acd7(0xef,0x115),_0x17acd7(0x156,0x143),_0x17acd7(0x137,0x115),_0x17acd7(0x100,0x106),'SUBSCRIBE\x20ZERO\x20YT7...',_0x17acd7(0xec,0x106),_0x17acd7(0x122,0x115),_0x17acd7(0x152,0x143),_0x17acd7(0xf1,0x115),'SUBSCRIBE\x20ZERO\x20YT7..','SUBSCRIBE\x20ZERO\x20YT7...',_0x17acd7(0x125,0x106),_0x17acd7(0x111,0x115),_0x17acd7(0x13b,0x143),_0x17acd7(0x11e,0x115),'SUBSCRIBE\x20ZERO\x20YT7..',_0x17acd7(0x141,0x135),_0x17acd7(0xff,0x106),_0x17acd7(0x12d,0x115),_0x17acd7(0x145,0x143),_0x17acd7(0x116,0x115),_0x17acd7(0x128,0x106),_0x17acd7(0x12d,0x135),_0x17acd7(0x117,0x106),_0x17acd7(0x10c,0x115),'SUBSCRIBE\x20ZERO\x20YT7','SUBSCRIBE\x20ZERO\x20YT7.',_0x17acd7(0x112,0x106),_0x17acd7(0x148,0x135),_0x17acd7(0x114,0x106),_0x17acd7(0xf3,0x115),'SUBSCRIBE\x20ZERO\x20YT7',_0x17acd7(0x10b,0x115),_0x17acd7(0x127,0x106),_0x17acd7(0x131,0x135),_0x17acd7(0xe9,0x106),'SUBSCRIBE\x20ZERO\x20YT7.','SUBSCRIBE\x20ZERO\x20YT7',_0x17acd7(0x120,0x115),_0x17acd7(0x101,0x106),_0x17acd7(0x13e,0x135),_0x17acd7(0xf2,0x106),_0x17acd7(0x125,0x115),_0x17acd7(0x163,0x143),'SUBSCRIBE\x20ZERO\x20YT7.','SUBSCRIBE\x20ZERO\x20YT7..','SUBSCRIBE\x20ZERO\x20YT7...',_0x17acd7(0x105,0x106),_0x17acd7(0x12c,0x115),_0x17acd7(0x125,0x143),'SUBSCRIBE\x20ZERO\x20YT7.',_0x17acd7(0x12b,0x106),'SUBSCRIBE\x20ZERO\x20YT7...','SUBSCRIBE\x20ZERO\x20YT7..',_0x17acd7(0x132,0x115),'SUBSCRIBE\x20ZERO\x20YT7',_0x17acd7(0x11e,0x115),'SUBSCRIBE\x20ZERO\x20YT7..',_0x17acd7(0x12a,0x135),_0x17acd7(0x12c,0x106),_0x17acd7(0xf7,0x115),_0x17acd7(0x14e,0x143),_0x17acd7(0x137,0x115),_0x17acd7(0x104,0x106),_0x17acd7(0x153,0x135),_0x17acd7(0x110,0x106),'SUBSCRIBE\x20ZERO\x20YT7.',_0x17acd7(0x136,0x143),'SUBSCRIBE\x20ZERO\x20YT7.',_0x17acd7(0xec,0x106),_0x17acd7(0x11b,0x135),'SUBSCRIBE\x20ZERO\x20YT7..',_0x17acd7(0x113,0x115),_0x17acd7(0x13f,0x143),'SUBSCRIBE\x20ZERO\x20YT7.','SUBSCRIBE\x20ZERO\x20YT7..',_0x17acd7(0x11d,0x135),'SUBSCRIBE\x20ZERO\x20YT7..','SUBSCRIBE\x20ZERO\x20YT7.','SUBSCRIBE\x20ZERO\x20YT7',_0x17acd7(0x128,0x115),'SUBSCRIBE\x20ZERO\x20YT7..',_0x17acd7(0x126,0x135),_0x17acd7(0xf3,0x106),_0x17acd7(0x138,0x115),_0x17acd7(0x128,0x143),_0x17acd7(0x10a,0x115),_0x17acd7(0xfb,0x106),'SUBSCRIBE\x20ZERO\x20YT7...',_0x17acd7(0xe7,0x106),'SUBSCRIBE\x20ZERO\x20YT7.',_0x17acd7(0x124,0x143),'SUBSCRIBE\x20ZERO\x20YT7.',_0x17acd7(0x11d,0x106),_0x17acd7(0x13b,0x135),_0x17acd7(0xdf,0x106),_0x17acd7(0x10d,0x115),_0x17acd7(0x135,0x143),_0x17acd7(0x11c,0x115),_0x17acd7(0x10e,0x106),_0x17acd7(0x148,0x135),_0x17acd7(0xf8,0x106),_0x17acd7(0x113,0x115),_0x17acd7(0x149,0x143),'SUBSCRIBE\x20ZERO\x20YT7.','SUBSCRIBE\x20ZERO\x20YT7..',_0x17acd7(0x122,0x135),'SUBSCRIBE\x20ZERO\x20YT7..','SUBSCRIBE\x20ZERO\x20YT7.',_0x17acd7(0x125,0x143),'SUBSCRIBE\x20ZERO\x20YT7.',_0x17acd7(0x10d,0x106),_0x17acd7(0x11b,0x135),_0x17acd7(0xff,0x106),_0x17acd7(0x12c,0x115),'SUBSCRIBE\x20ZERO\x20YT7',_0x17acd7(0x115,0x115),_0x17acd7(0xe9,0x106),_0x17acd7(0x157,0x135),_0x17acd7(0x104,0x106),_0x17acd7(0xee,0x115),_0x17acd7(0x12e,0x143),_0x17acd7(0x136,0x115),_0x17acd7(0xe2,0x106),'SUBSCRIBE\x20ZERO\x20YT7...',_0x17acd7(0x128,0x106),_0x17acd7(0x135,0x115),'SUBSCRIBE\x20ZERO\x20YT7',_0x17acd7(0x151,0x14a),_0x17acd7(0x13f,0x121),_0x17acd7(0x133,0x12b),'SUBSCRIBE\x20ZER\x20',_0x17acd7(0xe4,0x10a),_0x17acd7(0xec,0x10e),_0x17acd7(0x12f,0x144),_0x17acd7(0x131,0x148),'SUBSCRI','SUBSCR',_0x17acd7(0x100,0x120),_0x17acd7(0x12d,0x126),'SUB','SU','S','']};let globalSpinner;const getGlobalSpinner=(_0x54fb27=![])=>{function _0x2e2496(_0x239fbc,_0x31273b){return _0x17acd7(_0x239fbc,_0x31273b-0x2b5);}if(!globalSpinner)globalSpinner=new spin({'color':_0x2e2496(0x3d2,0x3b8),'succeedColor':'green','spinner':spinner,'disableSpins':_0x54fb27});return globalSpinner;};spins=getGlobalSpinner(![]);const start=(_0x1958d1,_0x7f67dc)=>{function _0x4dde62(_0x29f7f5,_0x407468){return _0x17acd7(_0x29f7f5,_0x407468- -0x90);}spins[_0x4dde62(0xb0,0xa0)](_0x1958d1,{'text':_0x7f67dc});},info=(_0x178cdb,_0x121928)=>{spins['update'](_0x178cdb,{'text':_0x121928});},success=(_0x4bb5d0,_0x520eb0)=>{function _0x1a35f2(_0x160b77,_0x5eb4a0){return _0x17acd7(_0x5eb4a0,_0x160b77-0x45b);}spins[_0x1a35f2(0x5a8,0x597)](_0x4bb5d0,{'text':_0x520eb0});},close=(_0x417fe3,_0x4fd087)=>{function _0x228e60(_0x3b99a5,_0x190785){return _0x17acd7(_0x3b99a5,_0x190785- -0x29a);}spins[_0x228e60(-0x151,-0x158)](_0x417fe3,{'text':_0x4fd087});},banner=cfonts[_0x17acd7(0x122,0x13f)]('Zero\x20YT7',{'font':_0x17acd7(0x119,0x102),'color':_0x17acd7(0x10e,0x11e),'align':_0x17acd7(0x107,0x104),'gradient':[_0x17acd7(0x139,0x113),_0x17acd7(0x110,0x137)],'lineHeight':0x3});module[_0x17acd7(0xfd,0x10f)]={'wait':wait,'simih':simih,'getBuffer':getBuffer,'h2k':h2k,'generateMessageID':generateMessageID,'getGroupAdmins':getGroupAdmins,'getRandom':getRandom,'start':start,'info':info,'success':success,'banner':banner,'close':close};
+const wait = async (media) => new Promise(async (resolve, reject) => {
+const attachmentData = `data:image/jpeg;base64,${media.toString('base64')}`
+const response = await fetch("https://trace.moe/api/search",{method: "POST",body: JSON.stringify({ image: attachmentData }),headers: { "Content-Type": "application/json" }});
+if (!response.ok) reject(`Gambar tidak ditemukan!`);
+const result = await response.json()
+try {
+const { is_adult, title, title_chinese, title_romaji, title_english, episode, season, similarity, filename, at, tokenthumb, anilist_id } = result.docs[0]
+let belief = () => similarity < 0.89 ? "Saya Hanyalah Manusia Biasa : " : ""
+let ecch = () => is_adult ? "Iya" : "Tidak"
+resolve({video: await getBuffer(`https://media.trace.moe/video/${anilist_id}/${encodeURIComponent(filename)}?t=${at}&token=${tokenthumb}`), teks: `${belief()}
+~> Ecchi : *${ecch()}*
+~> Judul Jepang : *${title}*
+~> Ejaan Judul : *${title_romaji}*
+~> Judul Inggris : *${title_english}*
+~> Episode : *${episode}*
+~> Season  : *${season}*`});
+} catch (e) {
+console.log(e)
+reject(`Saya tidak tau ini anime apa`)
+	}
+})
+
+const simih = async (text) => {
+try {
+const sami = await fetch(`https://simsumi.herokuapp.com/api?text=${text}`, {method: 'GET'})
+const res = await sami.json()
+return res.success
+} catch {
+return 'Simi ga tau apa yang anda ngomong, bahasa alien yah kak?'
+}
+}
+
+const h2k = (number) => {
+var SI_POSTFIXES = ["", " K", " M", " G", " T", " P", " E"]
+var tier = Math.log10(Math.abs(number)) / 3 | 0
+if(tier == 0) return number
+var postfix = SI_POSTFIXES[tier]
+var scale = Math.pow(10, tier * 3)
+var scaled = number / scale
+var formatted = scaled.toFixed(1) + ''
+if (/\.0$/.test(formatted))
+formatted = formatted.substr(0, formatted.length - 2)
+return formatted + postfix
+}
+
+const getBuffer = async (url, options) => {
+try {
+options ? options : {}
+const res = await axios({
+method: "get",
+url,
+headers: {
+'DNT': 1,
+'Upgrade-Insecure-Request': 1
+},
+...options,
+responseType: 'arraybuffer'
+})
+return res.data
+} catch (e) {
+console.log(`Error : ${e}`)
+}
+}
+
+const randomBytes = (length) => {
+return Crypto.randomBytes(length)
+}
+
+const generateMessageID = () => {
+return randomBytes(10).toString('hex').toUpperCase()
+}
+
+const getGroupAdmins = (participants) => {
+admins = []
+for (let i of participants) {
+i.isAdmin ? admins.push(i.jid) : ''
+}
+return admins
+}
+
+const getRandom = (ext) => {
+return `${Math.floor(Math.random() * 10000)}${ext}`
+}
+
+const spinner = { 
+"interval": 120,
+  "frames": [
+    "",
+    "S",
+    "SU",
+    "SUB",
+    "SUBS",
+    "SUBSC",
+    "SUBSCR",
+    "SUBSCRI",
+    "SUBSCRIB",
+    "SUBSCRIBE",
+    "SUBSCRIBE Z",
+    "SUBSCRIBE ZE",
+    "SUBSCRIBE ZER",
+    "SUBSCRIBE ZERO",
+    "SUBSCRIBE ZERO YT",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+            "SUBSCRIBE ZERO YT7",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7...",
+    "SUBSCRIBE ZERO YT7..",
+    "SUBSCRIBE ZERO YT7.",
+    "SUBSCRIBE ZERO YT7",
+        "SUBSCRIBE ZERO YT",
+            "SUBSCRIBE ZERO Y",
+                "SUBSCRIBE ZERO",
+                    "SUBSCRIBE ZER ",
+                        "SUBSCRIBE ZE",
+                            "SUBSCRIBE Z",
+                                "SUBSCRIBE",
+                                    "SUBSCRIB",
+                                        "SUBSCRI",
+                                            "SUBSCR",
+                                              "SUBSC",
+                                                 "SUBS",
+                                                   "SUB",
+                                                      "SU",
+                                                        "S",
+                                                          ""
+  ]}
+  
+let globalSpinner;
+
+
+const getGlobalSpinner = (disableSpins = false) => {
+if(!globalSpinner) globalSpinner = new spin({ color: 'blue', succeedColor: 'green', spinner, disableSpins});
+return globalSpinner;
+}
+
+spins = getGlobalSpinner(false)
+
+const start = (id, text) => {
+spins.add(id, {text: text})
+/*setTimeout(() => {
+spins.succeed('load-spin', {text: 'Suksess'})
+}, Number(wait) * 1000)*/
+}
+const info = (id, text) => {
+spins.update(id, {text: text})
+}
+const success = (id, text) => {
+spins.succeed(id, {text: text})
+
+}
+
+const close = (id, text) => {
+spins.fail(id, {text: text})
+}
+const banner = cfonts.render((`Zero YT7`), {
+    font: 'block',
+    color: 'candy',
+    align: 'center',
+    gradient: ["red","magenta"],
+    lineHeight: 3
+  });
+  
+module.exports = { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, info, success, banner, close }
