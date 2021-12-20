@@ -365,7 +365,7 @@ zero.groupRemove(from, [sender]);
 }
 if (budy.length > 3500) {
 if (!isGroup) return
-if (!isAntiVirtex) return
+if (!isAntivirtex) return
 if (isGroupAdmins) return
 reply('Tandai telah dibaca\n'.repeat(300))
 reply(`「 VIRTEX DETECTED!! 」\n\nKamu Mengirimkan Virus, Maaf Kamu Di Kick Dari Group :(`)
