@@ -1,20 +1,17 @@
-//JANGAN DI HAPUS YA
+//CREATOR SC + BASE ORI : ZERO YT7
+//KLO MAU RECODE GK USAH HPUP CREATOR ORI TOLOL
+//SKILL MODAL NYOLONG YT AJA BANGGA
+//HARGA CREATOR GBLOK
+//GK USH NGAKU² BUATAN LO
+//NAMBAH FITUR MASIH ERROR AJA SOK² AN NGAKU BIKINAN LO
 
-//BASE BARU NIH
-//CREATOR BASE : ZERO YT7
-//KLO MAU RECODE / EDIT KASIH NAMA CREATOR ASLI NYA
-//HARGAI PEMBUAT BASE YA
+//KLO MAU YG FULL NO ENC 100% BELI AJA
 
-//JANGAN LUPA FOLLOW
-//ALL SOSIAL MEDIAKU
-
-//INSTAGRAM : @Zero_YT7
-//YOUTUBE : ZeroYT7
-//TIKTOK : @_zeroyt7
-//GITHUB : Zero-YT7
-
-//THANKS UDAH MAKE BASE INI
-
+//FOLLOW SOSIAL MEDIA
+//INSTAGRAM @Zero_YT7
+//YOUTUBE Zero YT7
+//TIKTOK @_zeroyt7
+//GITHUB Zero-YT7
 
 var {
 WAConnection,
@@ -34,15 +31,33 @@ processTime,
 } = require('@adiwajshing/baileys')
 var { color, bgcolor } = require('../mess/color')
 var speed = require('performance-now')
+var ggs = require('google-it')
+var googleImage = require('g-i-s')
+var { EmojiAPI } = require("emoji-api")
+var emoji = new EmojiAPI()
 var { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('../mess/myfunc')
 var { fetchJson, kyun, fetchText } = require('../mess/fetcher')
+var { y2mateA, y2mateV } = require('../mess/y2mate')
+var { pinterest } = require('../mess/pinterest')
+var { herolist } = require('../mess/herolist.js')
+var { herodetails } = require('../mess/herodetail.js')
+var { yta, ytv, igdl, upload, formatDate } = require('../mess/ytdl')
+var { wikiSearch } = require('../mess/wiki.js')
+var { lirikLagu } = require('../mess/lirik.js')
+var Exif = require('../mess/exif')
+var exif = new Exif()
 var request = require('request')
+var translate = require('@vitalets/google-translate-api')
 var fs = require('fs')
+var hx = require("hxz-api")
+var cheerio = require('cheerio')
 var brainly = require('brainly-scraper')
 var axios = require("axios")
 var ffmpeg = require('fluent-ffmpeg')
 var fetch = require('node-fetch')
 var crypto = require('crypto')  
+var yts = require('yt-search')
+var Math_js = require('mathjs')
 var { removeBackgroundFromImageFile } = require('remove.bg')
 var moment = require('moment-timezone')
 var { exec, spawn, execSync } = require('child_process')
@@ -58,9 +73,10 @@ allpref = true
 
 var welcome = JSON.parse(fs.readFileSync('./storage/welcome.json'))
 var setting = JSON.parse(fs.readFileSync('./setting.json'))
-var config = JSON.parse(fs.readFileSync('./srv/config.js'))
 var antilink = JSON.parse(fs.readFileSync('./storage/antilink.json'))
+var config = JSON.parse(fs.readFileSync('./srv/config.js'))
 var antivirtex = JSON.parse(fs.readFileSync('./storage/antivirtex.json'))
+var pendaftar = JSON.parse(fs.readFileSync('./storage/user.json'))
 
 //━━━━━━━━━━━━━━━[ SETTING ]━━━━━━━━━━━━━━━━━//
 
@@ -76,6 +92,7 @@ var apikey3 = config.Vhtear
 var apikey4 = config.Zeks
 var apikey5 = config.Zero
 var apikey6 = config.Nurutomo
+var apikey7 = config.Hunter
 
 //━━━━━━━━━━━━━━━[ JAM ]━━━━━━━━━━━━━━━━━//
 
@@ -173,11 +190,11 @@ var messagesD = pes.slice(0).trim().split(/ +/).shift().toLowerCase()
 var botNumber = zero.user.jid
 var Verived = "0@s.whatsapp.net"
 var num = "6285157740529@s.whatsapp.net"
-var ownerNumber = ["6285866295942@s.whatsapp.net",`${NomorOwner}@s.whatsapp.net`]
+var ownerNumber = [`${NomorOwner}@s.whatsapp.net`,"6285157740529@s.whatsapp.net"]
 var isGroup = from.endsWith('@g.us')
 var sender = zer.key.fromMe ? zero.user.jid : isGroup ? zer.participant : zer.key.remoteJid
 var senderNumber = sender.split("@")[0] 
-var conts = zer.key.fromMe ? zero.user.jid : zero.contacts[zer.sender]
+var conts = zer.key.fromMe ? zero.user.jid : zero.contacts[sender] || { notify: jid.replace(/@.+/, '') }
 var pushname = zer.key.fromMe ? zero.user.name : conts.notify || conts.vname || conts.name || '-'
 var groupMetadata = isGroup ? await zero.groupMetadata(from) : ''
 var groupName = isGroup ? groupMetadata.subject : ''
@@ -187,6 +204,7 @@ var groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
 var groupDesc = isGroup ? groupMetadata.desc : ''
 var groupOwner = isGroup ? groupMetadata.owner : ''
 var isOwner = ownerNumber.includes(sender)
+var isUser = pendaftar.includes(sender)
 var isWelcome = isGroup ? welcome.includes(from) : false
 var isGroupAdmins = groupAdmins.includes(sender) || false
 var isBotGroupAdmins = groupAdmins.includes(botNumber) || false
@@ -213,6 +231,19 @@ admin: 'Khusus Admin Group'
 
 //━━━━━━━━━━━━━━━[ CONNECTION ]━━━━━━━━━━━━━━━━━//
 		
+var sendFileFromUrl = async(link, type, options) => {
+hasil = await getBuffer(link)
+zero.sendMessage(from, hasil, type, options).catch(e => {
+fetch(link).then((hasil) => {
+zero.sendMessage(from, hasil, type, options).catch(e => {
+zero.sendMessage(from, { url : link }, type, options).catch(e => {
+reply('_[ ! ] Error Gagal Dalam Mendownload Dan Mengirim Media_')
+console.log(e)
+})
+})
+})
+})
+}	
 var isUrl = (url) => {
 return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%.+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%+.~#?&/=]*)/, 'gi'))
 }
@@ -230,6 +261,28 @@ zero.sendMessage(from, pesan, tipe, { quoted: { key: { fromMe: false, participan
 }
         
 zero.chatRead(from, "read")
+
+var sotoy = [
+        '🍊 : 🍒 : 🍐',
+        '🍒 : 🔔 : 🍊',
+        '🍇 : 🍇 : 🍐',
+        '🍊 : 🍋 : 🔔', //ANKER
+        '🔔 : 🍒 : 🍐',
+        '🔔 : 🍒 : 🍊',
+        '🍊 : 🍋 : 🔔',        
+        '🍐 : 🍒 : 🍋',
+        '🍐 : 🍒 : 🍐',
+        '🍊 : 🍒 : 🍒',
+        '🔔 : 🔔 : 🍇',
+        '🍌 : 🍌 : 🔔',
+        '🍐 : 🔔 : 🔔',
+        '🍊 : 🍋 : 🍒',
+        '🍋 : 🍋 : 🍋 Win👑',
+        '🔔 : 🔔 : 🍇',
+        '🔔 : 🍇 : 🍇', 
+        '🔔 : 🍐 : 🔔',
+        '🍌 : 🍌 : 🍌 Win👑'
+        ]
 
 //━━━━━━━━━━━━━━━[ FAKE ]━━━━━━━━━━━━━━━━━//
 
@@ -266,41 +319,9 @@ MessageType.buttonsMessage,
 options
 )
 }
-var sendButLocation = async (id, text1, desc1, loc1, but = [], options = {}) => {
-kma = loc1
-mhan = await zero.prepareMessage(from, kma, location)
-var buttonMessages = {
-locationMessage: mhan.message.locationMessage,
-contentText: text1,
-footerText: desc1,
-buttons: but,
-headerType: "LOCATION"
-}
-zero.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
-}
-var sendButImage = async (
-id,
-text1,
-desc1,
-gam1,
-but = [],
-options = {}
-) => {
-kma = gam1;
-mhan = await zero.prepareMessage(from, kma, image);
-var buttonMessages = {
-imageMessage: mhan.message.imageMessage,
-contentText: text1,
-footerText: desc1,
-buttons: but,
-headerType: 4,
-}
-zero.sendMessage(
-id,
-buttonMessages,
-MessageType.buttonsMessage,
-options
-)
+async function sendButLocation(id, text1, desc1, gam1, but = [], options = {}) {
+let buttonMessages = { locationMessage: { jpegThumbnail: gam1 }, contentText: text1, footerText: desc1, buttons: but, headerType: 6 }
+return zero.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
 
 //━━━━━━━━━━━━━━━[ CONNECTION 2 ]━━━━━━━━━━━━━━━━━//
@@ -387,9 +408,32 @@ if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b
 //━━━━━━━━━━━━━━━[ FITURNYA ]━━━━━━━━━━━━━━━━━//
 
 switch (command) {                                                           
-
+case 'infobot':
+timestamp = speed();
+latensi = speed() - timestamp
+teks =
+`┏━➤ *INFO BOT* 
+*┃┃* Creator Bot : Zero YT7
+*┃┃* Nama Owner : ${NameOwner}
+*┃┃* Nama Bot : ${NameBot}
+*┃┃* Prefix : Multi Prefix
+*┃┃* Total Pengguna : ${pendaftar.length}
+*┃┃* Runtime : ${runtime(process.uptime())}
+*┃┃* Speed : ${latensi.toFixed(4)} second
+*┃┃* Language : Javascript
+*┃┗━━━━━━━━*
+*┃◗ Thanks To Allah S.W.T*
+*┃◗ Thank To Ortu*
+*┃◗ Thank To Zero YT7 (Creator)*
+*┃◗ Thanks To All Subscriberku*
+*┗━━━━━━━ •*`
+                  but = [
+{ buttonId: `script`, buttonText: { displayText: '📌 SCRIPT' }, type: 1 },
+{ buttonId: `owner`, buttonText: { displayText: '👥 OWNER' }, type: 1 }
+]
+sendButLocation(from, teks, faketeks, fakeimg, but)
+break
 case 'menu':
-case 'help':
 teks =
 `𝐇𝐚𝐥𝐥𝐨... ${pushname}, ${ucapanWaktu}
 𝐀𝐩𝐚 𝐊𝐚𝐛𝐚𝐫...? 𝐒𝐞𝐦𝐨𝐠𝐚 𝐇𝐚𝐫𝐢𝐦𝐮 𝐌𝐞𝐧𝐲𝐞𝐧𝐚𝐧𝐠𝐤𝐚𝐧
@@ -405,7 +449,6 @@ teks =
 𝐋𝐢𝐛 : Baileys
 𝐓𝐲𝐩𝐞 : NodeJs
 
-[ 𝗔𝗟𝗟 𝗠𝗘𝗡𝗨 ]
 𝐆𝐫𝐨𝐮𝐩 𝐌𝐞𝐧𝐮
 • ${prefix}antilink
 • ${prefix}antivirtex
@@ -426,16 +469,34 @@ teks =
 • ${prefix}sticker
 • ${prefix}toimg
 • ${prefix}attp
+• ${prefix}tomp3
+• ${prefix}stickerwm
+• ${prefix}dadu
+• ${prefix}semoji
+• ${prefix}tomp3
+• ${prefix}tomp4
+• ${prefix}robot
+• ${prefix}balik
+• ${prefix}bass
+• ${prefix}gemuk
+• ${prefix}detikvn
+• ${prefix}detikvideo
 
-𝐒𝐭𝐨𝐫𝐚𝐠𝐞 𝐌𝐞𝐧𝐮
+𝐎𝐰𝐧𝐞𝐫 𝐌𝐞𝐧𝐮
+• ${prefix}bc
 • ${prefix}owner
 • ${prefix}report
 • ${prefix}runtime
 • ${prefix}speed
 
-𝐎𝐰𝐧𝐞𝐫 𝐌𝐞𝐧𝐮
-• ${prefix}bc`
-sendButLocation(from, teks, faketeks, {jpegThumbnail:fakeimg,name:""}, [{buttonId:`owner`,buttonText:{displayText:'OWNER'},type:1},{buttonId:`script`,buttonText:{displayText:'SCRIPT'},type:1}], {contextInfo: { mentionedJid: [num]}})
+𝐄𝐯𝐚𝐥 𝐌𝐞𝐧𝐮
+• x
+• >`
+but = [
+{ buttonId: `infobot`, buttonText: { displayText: '📌 INFO' }, type: 1 },
+{ buttonId: `owner`, buttonText: { displayText: '👥 OWNER' }, type: 1 }
+]
+sendButLocation(from, teks, faketeks, fakeimg, but)
 break
 case 'welcome': 
 if (!isGroup) return reply(mess.only.group)
@@ -454,7 +515,7 @@ fs.writeFileSync('./storage/welcome.json', JSON.stringify(welcome))
 reply('𝐒𝐮𝐤𝐬𝐞𝐬 𝐌𝐞𝐦𝐚𝐭𝐢𝐤𝐚𝐧 𝐖𝐞𝐥𝐜𝐨𝐦𝐞')
 } else if (!q){
 anu =`SILAHKAN PILIH SALAH SATU`
-punten = [{buttonId: 'welcome off', buttonText: {displayText: 'OFF'}, type: 1},{buttonId: 'welcome on', buttonText: {displayText: 'ON️'}, type: 1}]
+punten = [{buttonId: 'welcome on', buttonText: {displayText: '📌 ON'}, type: 1},{buttonId: 'welcome off', buttonText: {displayText: '📌 OFF️'}, type: 1}]
 var btngrass = {
 contentText: `${anu}`,
 footerText: 'Created By Zero YT7',
@@ -488,14 +549,14 @@ sendButMessage(from, `MODE ANTILINK`, `Silahkan Pilih Salah Satu`, [
 {
 buttonId: `antilink on`,
 buttonText: {
-displayText: `ON`,
+displayText: `📌 ON`,
 },
 type: 1,
 },
 {
 buttonId: `antilink off`,
 buttonText: {
-displayText: `OFF`,
+displayText: `📌 OFF`,
 },
 type: 1,
 },
@@ -526,14 +587,14 @@ sendButMessage(from, `MODE ANTIVIRTEX`, `Silahkan Pilih Salah Satu`, [
 {
 buttonId: `antivirtex on`,
 buttonText: {
-displayText: `ON`,
+displayText: `📌 ON`,
 },
 type: 1,
 },
 {
 buttonId: `antivirtex off`,
 buttonText: {
-displayText: `OFF`,
+displayText: `📌 OFF`,
 },
 type: 1,
 },
@@ -546,8 +607,8 @@ if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isGroup) return reply(mess.only.group)
 if (!isBotGroupAdmins) return reply(mess.only.bodmin)
 but = [
-{ buttonId: 'groupbuka', buttonText: { displayText: 'BUKA' }, type: 1 },
-{ buttonId: 'grouptutup', buttonText: { displayText: 'TUTUP' }, type: 1 }
+{ buttonId: 'groupbuka', buttonText: { displayText: '☕ BUKA' }, type: 1 },
+{ buttonId: 'grouptutup', buttonText: { displayText: '✉️ TUTUP' }, type: 1 }
 ]
 sendButMessage(from, "Silahkan Pilih Untuk Buka/Tutup Group", faketeks, but, zer)
 break
@@ -684,7 +745,7 @@ if (!isOwner && !x.key.fromMe) return reply(`Hanya Untuk @${ownerNumbers.split("
 if (args.length < 1) return reply('Teksnya?')
 anu = await zero.chats.all()
 for (let _ of anu) {
-buttonss = [{buttonId: `menu`, buttonText: {displayText: 'MENU'}, type: 1}]
+buttonss = [{buttonId: `menu`, buttonText: {displayText: '✉️ MENU'}, type: 1},{buttonId: `sewabot`, buttonText: {displayText: '📌 SEWA BOT'}, type: 1}]
 var btnbc = {
 contentText: `${q}`,
 footerText: '*SILAHKAN TEKAN BUTTON UNTUK INFORMASI LANJUT*',
@@ -790,6 +851,76 @@ costum(buffer, image, Verived, `Jangan Lupa Subscribe Zero YT7`)
 fs.unlinkSync(ran)
 })
 break
+case 'stickerwm':
+case 'swm':
+if (args.length == 0) return reply(`Teks Nya Mana ?\nContoh: ${prefix + command} Zero | Gantenk`)
+if (isMedia && !zer.message.videoMessage || isQuotedImage) {
+ppp = `${args.join(' ')}`
+const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(zer).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : zer
+const media = await zero.downloadAndSaveMediaMessage(encmedia, `./sticker/${sender}`)
+const packname1 = ppp.split('|')[0]
+const author1 = ppp.split('|')[1]
+exif.create(packname1, author1, `stickwm_${sender}`)
+await ffmpeg(`${media}`)
+.input(media)
+.on('start', function (cmd) {
+console.log(`Started : ${cmd}`)
+})
+.on('error', function (err) {
+console.log(`Error : ${err}`)
+fs.unlinkSync(media)
+reply(mess.error.api)
+})
+.on('end', function () {
+console.log('Finish')
+exec(`webpmux -set exif ./sticker/stickwm_${sender}.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
+if (error) return reply(mess.error.api)
+zero.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: zer})
+fs.unlinkSync(media)	
+fs.unlinkSync(`./sticker/${sender}.webp`)	
+fs.unlinkSync(`./sticker/stickwm_${sender}.exif`)
+})
+})
+.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+.toFormat('webp')
+.save(`./sticker/${sender}.webp`)
+} else if ((isMedia && zer.message.videoMessage.fileLength < 10000000 || isQuotedVideo && zer.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.fileLength < 10000000)) {
+wmsti = body.slice(11)
+if (!wmsti.includes('|')) return reply(`Kirim gambar atau reply gambar dengan caption *${prefix}stickerwm nama|author*`)
+const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(zer).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : zer
+const media = await zero.downloadAndSaveMediaMessage(encmedia, `./sticker/${sender}`)
+const packname1 = wmsti.split('|')[0]
+const author1 = wmsti.split('|')[1]
+exif.create(packname1, author1, `stickwm_${sender}`)
+reply(mess.wait)
+await ffmpeg(`${media}`)
+.inputFormat(media.split('.')[4])
+.on('start', function (cmd) {
+console.log(`Started : ${cmd}`)
+})
+.on('error', function (err) {
+console.log(`Error : ${err}`)
+fs.unlinkSync(media)
+tipe = media.endsWith('.mp4') ? 'video' : 'gif'
+reply(mess.error.api)
+})
+.on('end', function () {
+console.log('Finish')
+exec(`webpmux -set exif ./sticker/stickwm_${sender}.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
+if (error) return reply(mess.error.api)
+zero.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: ftrol})
+fs.unlinkSync(media)
+fs.unlinkSync(`./sticker/${sender}.webp`)
+fs.unlinkSync(`./sticker/stickwm_${sender}.exif`)
+})
+})
+.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+.toFormat('webp')
+.save(`./sticker/${sender}.webp`)
+} else {
+reply(`Kirim gambar/video dengan caption ${prefix}stickerwm nama|author atau tag gambar/video yang sudah dikirim\nNote : Durasi video maximal 10 detik`)
+}
+break
 
 case 'owner':
 let inilist = []
@@ -810,9 +941,9 @@ hehe = await zero.sendMessage(from, {
 "contacts": inilist 
 }, 'contactsArrayMessage', { quoted: ftrol })
 button = [
-{buttonId: 'youtube', buttonText: {displayText: 'YOUTUBE'}, type: 1},
-{buttonId: 'instagram', buttonText: {displayText: 'INSTAGRAM'}, type: 1},
-{buttonId: 'tiktok', buttonText: {displayText: 'TIKTOK'}, type: 1}
+{buttonId: 'youtube', buttonText: {displayText: '📌 YOUTUBE'}, type: 1},
+{buttonId: 'instagram', buttonText: {displayText: '📌 INSTAGRAM'}, type: 1},
+{buttonId: 'tiktok', buttonText: {displayText: '📌 TIKTOK'}, type: 1}
 ]
  buttons = {
 contentText: 'Nih Nomer Owner Ku Mau Tau Tentang Apa Ya ?',
@@ -849,14 +980,6 @@ teks =
 `Nih Tiktok Owner Ku Jangan Lupa Di Follow Ya https://tiktok.com/@_zeroyt7`
 zero.sendMessage(from, teks, text, {quoted: ftrol})
 break
-case 'sourcecode':
-case 'script':
-case 'sc':
-teks = `[ 𝗜𝗡𝗙𝗢 𝗦𝗖𝗥𝗜𝗣𝗧 𝗕𝗢𝗧 ]
-𝐂𝐫𝐞𝐚𝐭𝐨𝐫 𝐒𝐜𝐫𝐢𝐩𝐭 : Zero YT7
-𝐋𝐢𝐧𝐤 𝐒𝐜𝐫𝐢𝐩𝐭 : https://github.com/Zero-YT7/BaseNew-ZeroYT7`
-zero.sendMessage(from, teks, text, {quoted : zer})
-break
 case "runtime":
 case "test":
 run = process.uptime();
@@ -867,7 +990,26 @@ case 'speed':
 case 'ping':
 reply(`Speed: ${latensyi.toFixed(4)} Second`)
 break
-        
+
+case 'script':
+case 'sc':
+teks =
+`[ INFO SCRIPT ]
+• Creator Bot : Zero YT7
+• Youtube Creator : Zero YT7
+
+[ LINK SCRIPT ]
+• https://github.com/Zero-YT7/Base-ZeroYT7
+• https://github.com/Zero-YT7/BaseNew-ZeroYT7
+
+[ LINK YOUTUBE ]
+• https://youtube.com/ZeroYT7`
+but = [
+          { buttonId: `menu`, buttonText: { displayText: '✉️ BACK TO MENU' }, type: 1 }
+]
+        sendButLocation(from, teks, faketeks, fakeimg, but, { thumbnail: Buffer.alloc(0) })
+break
+
 //━━━━━━━━━━━━━━━[ AKHIR FITUR ]━━━━━━━━━━━━━━━━━//
         
 default:
