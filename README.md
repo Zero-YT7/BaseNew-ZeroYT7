@@ -7,7 +7,7 @@
 
 - 👼 My name is Zero YT7
 
-- 🗣️ I am 18 years old 
+- 🗣️ I am 19 years old 
 
 - 🔭 I am Not programmer
  
@@ -71,14 +71,14 @@ pkg install ffmpeg
 pkg install libwebp 
 pkg install imagemagick
 pkg install bash
-git clone https://github.com/Zero-YT7/Base-ZeroYT7.git
+git clone https://github.com/Zero-YT7/BaseNew-ZeroYT7.git
 cd BaseNew-ZeroYT7
 npm install
 npm start
 ```
 ## For Windows
 ```bash
-git clone https://github.com/Zero-YT7/Base-ZeroYT7.git
+git clone https://github.com/Zero-YT7/BaseNew-ZeroYT7.git
 cd BaseNew-ZeroYT7
 npm install
 npm start
@@ -91,7 +91,7 @@ apt apt install ffmpeg
 apt apt install libwebp 
 apt apt install imagemagick
 apt install bash
-git clone https://github.com/Zero-YT7/Base-ZeroYT7.git
+git clone https://github.com/Zero-YT7/BaseNew-ZeroYT7.git
 cd BaseNew-ZeroYT7
 npm install
 npm start
