@@ -102,7 +102,6 @@ npm start
 • Hexagonz
 • Mhankbarbar
 • Chaliph
-• Lolhuman
 • Allah S.W.T
 • All Creator Bot
 • All Subscriber Ku
