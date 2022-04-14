@@ -42,8 +42,8 @@
 
 ## ```SETTING```
 
-- Owner number [Here](https://github.com/Zero-YT7/BaseNew-ZeroYT7/blob/master/setting.json#L3)
-- Owner name [Here](https://github.com/Zero-YT7/BaseNew-ZeroYT7/blob/master/setting.json#L4)
+- Owner number [Here](https://github.com/Zero-YT7/BaseNew-ZeroYT7/blob/master/setting.json#L4)
+- Owner name [Here](https://github.com/Zero-YT7/BaseNew-ZeroYT7/blob/master/setting.json#L3)
 - Botname [Here](https://github.com/Zero-YT7/BaseNew-ZeroYT7/blob/master/setting.json#L2)
 
 ## ```DONASI```
@@ -97,6 +97,7 @@ npm install
 npm start
 ```
 ## Big Thanks To
+ ```
 • Zero YT7
 • Hexagonz
 • Mhankbarbar
@@ -105,3 +106,4 @@ npm start
 • Allah S.W.T
 • All Creator Bot
 • All Subscriber Ku
+```
